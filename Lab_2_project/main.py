@@ -136,7 +136,13 @@ def main():
     sales_stats = analyzer.process_sales_data()
     analyzer.visualize_data(user_stats, sales_stats)
 
-    sample_text = "Пример текста для анализа"
+    sample_text = """
+        Пример текста для анализа.
+        Грачи прилетели сегодня рано утром. Мы сначала их не заметили. Черные птицы беспорядочно расселись на поле.
+        На темной пахоте их нелегко было заметить. А затем грачи взлетели на белоствольные березы, 
+        и началась шумная птичья конференция об устройстве гнезд. 
+        И тут все увидели, что прилетели грачи — гонцы наступившей весны.
+        """
     text_analysis = analyzer.analyze_text_data(sample_text)
 
     analyzer.generate_report(user_stats, sales_stats, text_analysis)
