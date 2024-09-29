@@ -1,29 +1,29 @@
 h4 {
-    text-align: right;
-    color: orange;
+    text-align: right; /* Выравнивание заголовка h4 по правому краю */
+    color: orange; /* Цвет текста заголовка h4 */
 }
 body {
-    font-size: 18px;
-    color: purple;
-    font-weight: bold;
-    text-align: justify;
+    font-size: 18px; /* Размер шрифта для всего текста в body */
+    color: purple; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    text-align: justify; /* Выравнивание текста по ширине */
 }
 a {
-    color: blue;
-    text-decoration: none;
+    color: blue; /* Цвет ссылок */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
 }
 table {
-    border: 4px solid black;
-    border-collapse: collapse;
-    width: 100%;
+    border: 4px solid black; /* Толстая черная рамка вокруг таблицы */
+    border-collapse: collapse; /* Объединение границ ячеек */
+    width: 100%; /* Таблица занимает всю ширину контейнера */
 }
 th {
-    background-color: aquamarine;
+    background-color: aquamarine; /* Цвет фона для заголовков таблицы */
 }
 td, th {
-    border: 1px solid black;
-    padding: 5px;
+    border: 1px solid black; /* Тонкие границы для ячеек и заголовков */
+    padding: 5px; /* Внутренний отступ в ячейках */
 }
 ol {
-    list-style-type: decimal;
+    list-style-type: decimal; /* Нумерованный список с цифрами */
 }
