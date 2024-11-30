@@ -20,12 +20,15 @@ def count_free_seats():
 def check_seat(row, seat):
     with open("task_53_auditorium.txt", "r") as file:
         seats = file.readlines()
-    # Проверяем, что номер ряда и места находятся в допустимых пределах
+    # Проверка корректности введенных ряда и места
+    # 1 <= row <= len(seats) - проверка, что ряд существует
+    # 1 <= seat <= len(seats[0].strip()) - проверка, что место существует
     # len(seats) - общее количество рядов
     # len(seats[0].strip()) - количество мест в ряду (убираем '\n' в конце строки)
     if 1 <= row <= len(seats) and 1 <= seat <= len(seats[0].strip()):
         # seats[row-1] - выбираем нужный ряд (индексация с 0, поэтому row-1)
         # [seat-1] - выбираем нужное место в ряду
+        # seats[row-1][seat-1] == '0' - проверка, свободно ли место
         return "Свободно" if seats[row-1][seat-1] == '0' else "Занято"
     else:
         return "Некорректный номер места"
@@ -37,6 +40,7 @@ while True:
     if choice.lower() == 'q':
         break
     try:
+        # map(int, ...) - преобразование каждого элемента в целое число
         # map() - замена for для каждого элемента итерируемого объекта
         row, seat = map(int, choice.split())
         print(f"Место {row}-{seat}: {check_seat(row, seat)}")
